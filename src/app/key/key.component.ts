@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'key',
+  selector: 'app-key',
   templateUrl: './key.component.html',
-  styleUrls: ['./hey.component.scss'],
+  styleUrls: ['./key.component.scss']
 })
 export class KeyComponent {
-  @Input() label: string;
+  @Input() label = 'X';
 }

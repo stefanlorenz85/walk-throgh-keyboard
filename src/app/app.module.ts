@@ -1,13 +1,26 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KeyComponent } from './key/key.component';
+import { KeyboardComponent } from './keyboard/keyboard.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, KeyComponent],
-  bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    KeyComponent,
+    KeyboardComponent,
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [
+    AppComponent,
+  ],
 })
-export class AppModule {}
+export class AppModule { }

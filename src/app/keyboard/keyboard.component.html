@@ -1,0 +1,37 @@
+
+<h3>Select word:</h3> 
+<input [(ngModel)]="word">
+<br>
+
+<h3>Your Start Position:</h3>
+{{startKey ?? 'Click on any key to select start position' | json}}
+<br>
+
+<div class="keyboard">
+    <ng-container *ngIf="currentKey$ | async as currentKey">
+
+        <ng-container *ngFor="let row of layout">
+            <div class="keyboard__row">
+                <ng-container *ngFor="let key of row">
+                    <app-key
+                        class="key keyboard__key"
+                        [class.key--active]="startKey === key"
+                        [class.key--stepper]="currentKey === key"
+                        [class.key--select]="currentKey === key && currentKey?.selected"
+                        [label]="key.label"
+                        (click)="setStartPosition(key)">
+                    </app-key>
+                </ng-container>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>
+
+<button (click)="startWalk()" [disabled]="!word || !startKey">Let's walk through</button>
+<br><br><br>
+
+
+<h3>Result:</h3>
+{{way?.keyPath| json}}
+
+{{currentKey$ | async | json}}

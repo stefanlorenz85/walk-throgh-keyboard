@@ -1,0 +1,34 @@
+.keyboard {
+    &__row {
+        display: flex;
+    }
+
+    &__key {
+        margin: 2px;
+    }
+}
+
+.key {
+    background-color: rgb(48, 48, 48);
+    border: 3px solid rgb(48, 48, 48);
+    color: rgb(225, 225, 225);
+
+    &--active {
+        border: 3px solid rgb(199, 33, 33) !important;
+    }
+
+    &--stepper {
+        border: 3px solid rgb(255, 157, 0);
+        background-color: rgb(255, 157, 0);
+    }
+
+    &--select {
+        border: 3px solid rgb(15, 196, 135);
+        background-color:  rgb(15, 196, 135);
+    }
+
+    &:hover {
+        cursor: pointer;
+        border: 3px dashed rgb(199, 33, 33);
+    }
+}
