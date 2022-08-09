@@ -65,7 +65,7 @@ export class KeyboardService {
         const wayToWalkCols = Math.abs(steps.col);
         let lastKey: Key = result.keysToMoveOver[result.keysToMoveOver.length - 1]; // use at() with es2022
         for (let index = 1; index <= wayToWalkCols; index++) {
-          result.keysToMoveOver.push(Math.sign(steps.row) === -1 ?
+          result.keysToMoveOver.push(Math.sign(steps.col) === -1 ?
             layout[lastKey.row][lastKey.col - index] :
             layout[lastKey.row][lastKey.col + index]);
         }
