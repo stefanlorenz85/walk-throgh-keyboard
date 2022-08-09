@@ -4,6 +4,7 @@
 <br>
 
 <h3>Your Start Position:</h3>
+Click a key to change...<br>
 {{startKey ?? 'Click on any key to select start position' | json}}
 <br>
 
@@ -26,8 +27,8 @@
         </ng-container>
     </ng-container>
 </div>
-
-<button (click)="startWalk()" [disabled]="!word || !startKey">Let's walk through</button>
+<br>
+<button class="go" (click)="startWalk()" [disabled]="!word || !startKey">Let's go!</button>
 <br><br><br>
 
 
