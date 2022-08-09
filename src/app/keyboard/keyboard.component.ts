@@ -10,7 +10,7 @@ import { Key, KeyboardLayout, KeyPosition } from '../_model/keyboard';
 })
 export class KeyboardComponent implements OnInit {
   layout: KeyboardLayout = [];
-  word = 'minuten';
+  word = 'kmwy';
   startKey: Key | undefined = undefined;
 
   way: { keyPath: Direction[]; keysToMoveOver: Key[] } | undefined;
